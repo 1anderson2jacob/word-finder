@@ -1,0 +1,23 @@
+{
+  "name": "word-finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "pg": "^7.18.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1anderson2jacob/word-finder.git"
+  },
+  "author": "Jacob Anderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1anderson2jacob/word-finder/issues"
+  },
+  "homepage": "https://github.com/1anderson2jacob/word-finder#readme"
+}
