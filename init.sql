@@ -4,3 +4,4 @@ CREATE TABLE words (
 );
 
 COPY words(word) FROM 'engmix.txt'
+-- /copy words(word) FROM 'engmix.txt'

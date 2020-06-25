@@ -11,8 +11,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
+//req.body.
 const getWord = (req, res) => {
-  pool.query('SELECT * FROM words', (err, results) => {
+  pool.query('SELECT * FROM words WHERE word LIKE \'tw_l__\';', (err, results) => {
     if (err) {
       throw err;
     }
