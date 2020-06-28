@@ -13,6 +13,7 @@ app.use(cors());
 
 //req.body.
 const getWord = (req, res) => {
+  console.log(req.params);
   pool.query('SELECT * FROM words WHERE word LIKE \'tw_l__\';', (err, results) => {
     if (err) {
       throw err;
