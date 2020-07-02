@@ -14,7 +14,8 @@ app.use(cors());
 //req.body.
 const getWord = (req, res) => {
   console.log(req.query);
-  pool.query('SELECT * FROM words WHERE word LIKE \'tw_l__\';', (err, results) => {
+  // pool.query('SELECT * FROM words WHERE word LIKE \'tw_l__\';', (err, results) => {
+  pool.query(queryCreator(req.query.incompleteWord), (err, results) => {
     if (err) {
       throw err;
     }
@@ -22,11 +23,15 @@ const getWord = (req, res) => {
   });
 }
 
-
-
 app.route('/')
   .get(getWord);
 
 app.listen(process.env.PORT || 80, () => {
   console.log('Server Listening');
 })
+
+function queryCreator(incompleteWord) {
+  let queryString = `SELECT * FROM words WHERE word LIKE \\'${incompleteWord}\\';`;
+
+  return queryString;
+}
