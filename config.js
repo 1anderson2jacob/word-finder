@@ -9,6 +9,8 @@ const pool = new Pool({
   // connectionString: connectionString,
   // connectionString: process.env.DATABASE_URL,
   connectionString: process.env.HEROKU_POSTGRESQL_BRONZE_URL,
+
+  // ssl: false, // needs enabled for local
   ssl: {
     rejectUnauthorized: false
   }
